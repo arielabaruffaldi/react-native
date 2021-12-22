@@ -7,32 +7,16 @@
  */
 
 import React from 'react';
-import type { Node } from 'react';
-import {
-  StyleSheet,
-  Text,
-  useColorScheme,
-} from 'react-native';
+import { StyleSheet, Text, View, TextInput, Button } from 'react-native';
 
-import {
-  Colors,
-} from 'react-native/Libraries/NewAppScreen';
-
-
-const App: () => Node = () => {
-  const isDarkMode = useColorScheme() === 'dark';
-
+const App = () => {
   return (
-    <Text
-      style={[
-        styles.sectionTitle,
-        {
-          color: isDarkMode ? Colors.white : Colors.black,
-        },
-      ]}>
-      Hola Coder
-    </Text>
-  );
+    <View style={[styles.container]}>
+      <Text style={[styles.sectionTitle]}>Hola Coder</Text>
+      <TextInput placeholder="Name a task" />
+      <Button title="Save" />
+    </View>
+  )
 };
 
 const styles = StyleSheet.create({
@@ -40,9 +24,11 @@ const styles = StyleSheet.create({
     display: 'flex',
     alignContent: 'center',
     justifyContent: 'center',
+    margin: 24,
   },
   sectionTitle: {
     fontSize: 34,
+    margin: 24,
     fontWeight: '600',
     textAlign: 'center',
   },
