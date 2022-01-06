@@ -1,8 +1,8 @@
 import React, { useState } from 'react';
 import { Text } from 'react-native';
 
-import Button from "../../components/atoms/Button";
-import Input from "../../components/atoms/Input";
+import Button from "../../atoms/Button";
+import Input from "../../atoms/Input";
 
 import { styles } from "./styles";
 
